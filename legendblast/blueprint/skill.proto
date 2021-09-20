@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message SkillCollection {
+    repeated SkillProto skills = 1;
+}
+
+message SkillProto {
+    string skill_id = 1;
+    string name = 2;
+    string type = 3;
+    repeated SkillLevelProto levels = 4;
+}
+
+message SkillLevelProto {
+    int32 level = 1;
+    int32 cool_down = 2;
+    int32 mp_cost = 3;
+    string description = 4;
+    int32 displayable = 5;
+    int32 picker_ui = 6;
+    repeated TriggerProto triggers = 7;
+    string shortDescription = 8;
+    string icon = 9;
+    string effect_info = 10;
+}
+
+message TriggerProto {
+    string trigger = 1;
+    string trigger_param = 2;
+    repeated TargetFinderProto target_finders = 3;
+    int32 behavior_order = 4;
+    string ai_trigger = 5;
+}
+
+
+message TargetFinderProto {
+    string target_finder = 1;
+    string target_finder_value = 2;
+    repeated BehaviorActionProto behavior_actions = 3;
+}
+
+
+message BehaviorActionProto {
+    string behavior_action_type = 1;
+    string behavior_action_value = 2;
+
+}
+
+message SkillTypeCollection {
+    repeated SkillTypeProto skill_types = 1;
+}
+
+message SkillTypeProto {
+    int32 id = 1;
+    string skill_type = 2;
+}

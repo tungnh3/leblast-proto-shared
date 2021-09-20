@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.chest;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.chest.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Cheat.Battle.Proto";
+
+message CheatBlastChestRequestProto {
+    int32 star_number = 1;
+    bool unlimited_chest_open = 2;
+}

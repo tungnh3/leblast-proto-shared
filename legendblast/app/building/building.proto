@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.building;
+
+option java_package = "com.alleylabs.legendblast.app.building.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+import "google/protobuf/any.proto";
+
+message BuildingConstructionRequestProto {
+    string id = 1;
+    int32 slot = 2;
+}
+
+message BuildingConstructionResponseProto {
+    google.protobuf.Any building = 1;
+}
+
+message ResourceCollectRequestProto {
+    int32 slot = 1;
+}
+
+message ResourceCollectResponseProto {
+    string currency = 1;
+    int32 count = 2;
+    int64 time_collect = 3;
+}
+
+message BuildingConstructionByPassRequestProto {
+    int32 slot = 1;
+}
+
+message BuildingConstructionByPassResponseProto {
+    int32 slot = 1;
+    string currency = 2;
+    int32 amount = 3;
+
+}

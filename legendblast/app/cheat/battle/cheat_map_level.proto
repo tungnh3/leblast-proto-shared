@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.battle;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.battle.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Cheat.Battle.Proto";
+
+
+message CheatMapLevelRequestProto {
+    string map_level = 1;
+}

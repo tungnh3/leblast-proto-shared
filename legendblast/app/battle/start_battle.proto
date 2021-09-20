@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.battle;
+
+option java_package = "com.alleylabs.legendblast.app.battle.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+import "legendblast/model/resource.proto";
+
+message StartBattleRequestProto {
+    //repeated string booster_list = 1; //P2 change, temp buff instead of booster
+}
+
+message StartBattleResponseProto {
+    repeated com.alleylabs.legendblast.model.TempBuffResourceProto temp_buff_lst = 1;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "google/protobuf/any.proto";
+
+message CheatUserResourceRequestProto {
+    map<string, int32> items = 1;
+}
+
+message CheatUserResourceResponseProto {
+    repeated google.protobuf.Any resources = 1;
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message ShopPackageBlueprint {
+    repeated ShopPackageItem packages = 1;
+}
+
+message ShopPackageItem {
+    string name = 1;
+    ShopPackageItemPurchaseType type = 2;
+    map<string, int32> items = 3;
+    string iap_package = 4;
+    map<string, int32> price_currencies = 5;
+    int64 start_date_time = 6;
+    int64 end_date_time = 7;
+    string category = 8;
+    string location = 9;
+    int32 stock_refresh = 10;
+    int32 stock_limit = 11;
+    int32 daily_weight = 12;
+    string description = 13;
+    string sub_location = 14;
+    string title_package = 15;
+    string banner_type = 16;
+    string item_type = 17;
+    string banner_image = 18;
+    int32 is_feature = 19;
+    string feature_icon = 20;
+    string badge_item = 21;
+    int64 start_discount_time = 22;
+    int64 end_discount_time = 23;
+    int32 discount_price = 24;
+    string iap_discount_package = 25;
+}
+
+enum ShopPackageItemPurchaseType {
+    IAP = 0;
+    CURRENCY = 1;
+    FREE = 2;
+    ADS = 3;
+}

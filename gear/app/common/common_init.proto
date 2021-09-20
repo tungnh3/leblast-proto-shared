@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "gear/model/resource.proto";
+import "gear/model/rbe.proto";
+
+import "legendblast/app/user/user_data.proto";
+
+message CommonInitResponseProto {
+    string player_id = 1;
+    string player_name = 2;
+    int32 xp = 3;
+    com.alleylabs.legendblast.app.user.UserDataResponseProto user_data = 4;
+    repeated com.alleylabs.gear.model.RbeEventProto rbe_event = 5;
+    repeated AdsLimitProto Ads = 6;
+}
+
+message AdsLimitProto {
+    string id      = 1;
+    int32  watched = 2;
+    int64  last    = 3;
+}

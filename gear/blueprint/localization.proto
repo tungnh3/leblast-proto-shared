@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message LocalizationBlueprint {
+    map<string, string> records = 1;
+}

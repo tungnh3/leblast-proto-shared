@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.building;
+
+option java_package = "com.alleylabs.legendblast.app.building.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+message CanteenCookRequest {
+    string item_type = 1;
+}
+
+message CanteenCookResponse {
+    string item_type = 1;
+    int64 time_finish = 2;
+    repeated string initial_type_cook = 3;
+}
+
+message CanteenClaimResponse {
+    string item_id = 1;
+    int32 duration = 2;
+    int64 start_time = 3;
+}
+
+

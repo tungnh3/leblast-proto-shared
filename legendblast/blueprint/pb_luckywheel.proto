@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message PBLuckyWheelBlueprint{
+    repeated PBLuckyWheelRecord pb_luckywheel_collections = 1;
+}
+
+message PBLuckyWheelRecord {
+    string id = 1;
+    string spin_currency = 2;
+    int32 spin_cost = 3;
+    repeated string wedges_pool_id = 4;
+    repeated int32 wedge_weight = 5;
+    int32 rare_weight = 6;
+    string rare_pool_id = 7;
+    int32 social_weight = 8;
+    int32 spin_ads_times = 9;
+    repeated int32 level = 10;
+    bool is_reset = 11;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.inventory;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.inventory.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Cheat.Inventory.Proto";
+
+import "legendblast/model/hero.proto";
+
+message CheatHeroInventoryRequestProto {
+    //input hero id to active one exact hero.
+    repeated string hero_id = 1;
+}
+
+message CheatHeroInventoryResponseProto {
+    //List of current user's hero
+    repeated com.alleylabs.legendblast.model.HeroProto hero_lst = 1;
+}

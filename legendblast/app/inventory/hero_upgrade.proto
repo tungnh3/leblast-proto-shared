@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.inventory;
+
+option java_package = "com.alleylabs.legendblast.app.inventory.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Inventory.Proto";
+
+message HeroUpgradeRequestProto {
+    string hero_id = 1;
+}

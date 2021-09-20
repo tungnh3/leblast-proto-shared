@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+message CommonLoginRequestProto {
+    string id = 1;
+    CommonLoginClientProto client = 2;
+}
+
+message CommonLoginClientProto {
+    string platform = 1;
+    string device = 2;
+    string version = 3;
+    string language = 4;
+}
+
+message CommonLoginResponseProto {
+    string asset = 1;
+    string odl = 2;
+    string odb = 3;
+}

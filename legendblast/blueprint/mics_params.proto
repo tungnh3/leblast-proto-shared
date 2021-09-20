@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message MicsParamsProto {
+    int32 heart_respawn_time = 1;
+
+    string winstreak1 = 2;
+
+    int32 daily_chest_star = 3;
+
+    int32 daily_chest_cycle = 4;
+
+    repeated string shop_daily_items = 5;
+
+    int32 shop_daily_duration = 6;
+
+    map<string, int32> shop_daily_refresh_cost = 7;
+
+    float convert_gold_to_gem_ratio = 8;
+
+    //Time display ads from user open app (second)
+    int32 luckywheel_ads_showTime = 9;
+
+    int32 gem_per_heart = 10;
+
+    int32 win_streak_active = 11;
+
+    //How long to refresh show ads (second)
+    int32 luckywheel_ads_cycle = 13;
+
+    // map level to unlock shop feature
+    int32 level_unlock_shop = 15;
+
+    int32 max_energy = 16;
+
+    string term_of_service = 17;
+
+    string privacy_policy = 18;
+
+    string android_app_id = 19;
+
+    string ios_app_id = 20;
+
+    string support_mail = 21;
+
+    // map level to unlock chest feature
+    int32 level_unlock_chest = 22;
+
+    float fake_loading_timer = 23;
+
+    //Merger platform
+    int64 day_start = 24;
+
+    int32 test_ads_is_on = 25;
+
+    repeated string test_ads_device_ids = 26;
+
+    int32 time_reload_battle = 27;
+
+    int32 max_map_level = 28;
+
+    int32 gem_to_ticket_pb_wheel = 29;
+
+    int64 time_to_next_steal = 30;
+
+    int32 level_to_unlock_tip = 31;
+
+    int32 hero_to_red_coin_ratio = 32;
+
+    int32 segment_range = 33;
+
+    int32 level_to_unlock_upgrade_tip = 34;
+
+    int32 level_to_close_post_wheel = 35;
+
+    float ratio_second_per_day = 36;
+
+    int32 top_player_number = 37;
+
+    int32 limit_lucky_wheel_level = 38;
+
+    int32 level_to_unlock_hero_shop = 39;
+
+    int32 level_to_unlock_mission = 40;
+
+    int32 gold_per_move = 41;
+
+    int32 level_to_unlock_inbox_message = 42;
+}

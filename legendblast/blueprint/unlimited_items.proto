@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message UnlimitedItemsBlueprint {
+    repeated UnlimitedItemProto unlimited_items = 1;
+}
+
+message UnlimitedItemProto {
+    string id = 1;
+    int32 duration = 2;
+    string type = 3;
+    string unit = 4;
+}

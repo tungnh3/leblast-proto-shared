@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.luckywheel;
+
+option java_package = "com.alleylabs.legendblast.app.luckywheel.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Luckywheel.Proto";
+
+import "google/protobuf/any.proto";
+import "legendblast/model/pb_luckywheel.proto";
+
+message SpinPBWheelRequestProto{
+
+}
+
+message SpinPBWheelResponseProto{
+    com.alleylabs.legendblast.model.WedgePbWheelProto reward_wedge = 1;
+    com.alleylabs.legendblast.model.PBWheelModelProto pb_wheel_model = 2;
+}
+
+message StealFriendRequest{
+    string user_id = 1;
+}
+
+message StealFriendResponse{
+    string reward_id = 1;
+    int32 number = 2;
+}

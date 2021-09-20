@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message TempBuffCollection {
+    repeated TempBuffProto temp_buffs = 1;
+}
+
+message TempBuffProto {
+    string id = 1;
+    string buff_name = 2;
+    string tier = 3;
+    string icon = 4;
+    string effect = 5;
+    string multiplier_value = 6;
+    int32 duration = 7;
+    string execution_flag = 8;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.user;
+
+option java_package = "com.alleylabs.legendblast.app.user.proto";
+option csharp_namespace = "AlleyLabs.LB.App.User.Proto";
+
+import public "legendblast/model/player.proto";
+import "legendblast/model/team.proto";
+import "legendblast/model/hero.proto";
+import "gear/model/resource.proto";
+import "legendblast/model/resource.proto";
+
+import "google/protobuf/any.proto";
+
+message UserDataResponseProto {
+    com.alleylabs.legendblast.model.PlayerProto player = 1;
+    repeated com.alleylabs.legendblast.model.TeamProto team_lst = 2;
+    repeated com.alleylabs.legendblast.model.HeroProto hero_lst = 3;
+    map<string, com.alleylabs.gear.model.CurrencyResourceProto> currencies = 4;
+    repeated com.alleylabs.legendblast.model.TempBuffResourceProto temp_buff_lst = 5;
+}
+
+message UserDataRequestProto {
+
+}
+
+message UserInfoUpdateRequestProto {
+    string player_name = 1;
+    int32 avata_id = 2;
+}

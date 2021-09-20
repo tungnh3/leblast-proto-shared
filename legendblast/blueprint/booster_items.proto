@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message BoosterItemsCollection {
+    repeated BoosterItemsProto booster_items = 1;
+}
+
+message BoosterItemsProto {
+    int32 order = 1;
+    string id = 2;
+    string name = 3;
+    string description = 4;
+    string model_id = 5;
+    string skill_id = 6;
+}

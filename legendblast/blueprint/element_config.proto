@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message ElementConfigProto {
+    int32 main_element = 1;
+    int32 opposite_element = 2;
+    int32 damage_rate = 3;
+}

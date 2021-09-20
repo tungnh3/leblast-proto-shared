@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+
+message TempBuffResourceProto {
+    string id = 1;
+    int64 start = 2;
+    int32 duration = 3;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.inventory;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.inventory.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Cheat.Inventory.Proto";
+
+message CheatHeroUpgradeRequestProto {
+    string hero_id = 1;
+    int32 hero_level = 2;
+}

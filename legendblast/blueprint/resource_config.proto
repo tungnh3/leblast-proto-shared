@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message ResourceConfigBlueprint {
+    repeated ResourceConfigProto configs = 1;
+}
+
+message PoolConfigBlueprint {
+    repeated PoolConfigProto configs = 1;
+}
+
+message ResourceConfigProto {
+    string     config_id                         = 1;
+    string     atlas_name                        = 2;
+    map<string, ResourceObjectProto> obj_configs = 3;
+}
+
+message ResourceObjectProto {
+    string     id                   = 1;
+    string     default_sprite       = 2;
+    map<string, string> sub_configs = 3;
+    string     separate_atlas       = 4;
+    bool       is_odl               = 5;
+}
+
+message PoolConfigProto {
+    string name         = 1;
+    string bundle_name  = 2;
+    string asset_path   = 3;
+    string label_name   = 4;
+    int32  pool_size    = 5;
+    bool   can_expand   = 6;
+    string type_asset   = 7;
+    string load_context = 8;
+    string load_type    = 9;
+    string load_rule    = 10;
+    string rule_value   = 11;
+    bool   enable       = 12;
+}

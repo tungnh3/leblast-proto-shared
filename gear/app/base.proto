@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "google/protobuf/any.proto";
+import "gear/model/rbe.proto";
+
+message BaseRequestProto {
+    string id = 1;
+    int64 time = 2;
+    bytes sign = 3;
+    google.protobuf.Any data = 4;
+}
+
+message BaseResponseProto {
+    int32 code = 1;
+    google.protobuf.Any data = 2;
+    repeated google.protobuf.Any resources = 3;
+    repeated com.alleylabs.gear.model.RbeEventProto rbe_event = 4;
+}
+
+message BaseMessageProto {
+    string command = 1;
+    google.protobuf.Any data = 2;
+}

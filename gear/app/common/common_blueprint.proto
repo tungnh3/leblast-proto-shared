@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "google/protobuf/any.proto";
+
+message CommonBlueprintRequestProto {
+    repeated string blueprints = 1;
+    string language = 2;
+}
+
+message CommonBlueprintResponseProto {
+    map<string, google.protobuf.Any> blueprints = 1;
+}

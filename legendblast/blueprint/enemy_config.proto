@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message EnemyConfigProto {
+    string id = 1;
+    string type = 2;
+    int32 hp = 3;
+    int32 isInheritSkill = 4;
+    string skillList = 5;
+    string weightList = 6;
+    int32 decrement = 7;
+    int32 resetCondition = 8;
+}

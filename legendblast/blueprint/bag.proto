@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message BagProto {
+    string id = 1;
+    repeated BagItemProto item_list = 2;
+    int32 pullNo = 3;
+}
+
+message BagItemProto {
+    string item = 1;
+    int32 amount = 2;
+    int32 rate = 3;
+}

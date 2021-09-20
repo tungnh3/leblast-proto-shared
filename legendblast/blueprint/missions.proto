@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message MissionCollection {
+    repeated MissionProto missions = 1;
+}
+
+message MissionProto {
+    string mission_id   = 1;
+    string mission_name = 2;
+    string description  = 3;
+    string mission_icon = 4;
+    int32  start_level  = 5;
+    int32  end_level    = 6;
+    string start_tid    = 7;
+    string end_tid      = 8;
+    string cosmic_id    = 10;
+    string pending_ftue = 11;
+    string main_hero    = 12;
+}

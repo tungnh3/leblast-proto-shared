@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.common;
+
+option java_package = "com.alleylabs.legendblast.common.proto";
+option csharp_namespace = "AlleyLabs.LB.Common.Proto";
+
+
+enum LuckyWheelType {
+    Ad_Wheel = 0;
+    Premium_Wheel = 1;
+    Jackpot_Wheel = 2;
+    Tutorial_Wheel = 3;
+}

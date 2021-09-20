@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.user;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.user.proto";
+option csharp_namespace = "AlleyLabs.LegendBlast.App.Cheat.User.Proto";
+
+import "legendblast/model/resource.proto";
+
+message CheatTempBuffRequestProto {
+    string temp_buff = 1;
+}
+
+message CheatTempBuffResponseProto {
+    repeated com.alleylabs.legendblast.model.TempBuffResourceProto temp_buff_lst = 1;
+}

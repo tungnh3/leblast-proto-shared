@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+
+message TeamProto {
+    int32 team_id = 1;
+    repeated string hero_array = 2;
+
+}

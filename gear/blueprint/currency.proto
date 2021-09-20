@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message CurrencyBlueprint {
+    repeated CurrencyItem currencies = 1;
+}
+
+message CurrencyItem {
+    string id = 1;
+    repeated string categories = 2;
+    int32 capacity = 3;
+    bool generate_auto = 4;
+    int32 generate_amount = 5;
+    int32 generate_time = 6;
+    int64 start_date = 7;
+    int64 end_date = 8;
+    string displayName = 9;
+    string icon = 10;
+    bool isLimited = 11;
+}

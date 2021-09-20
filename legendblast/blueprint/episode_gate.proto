@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message EpisodeGateBlueprint {
+    map<int32, EpisodeGateProto> episode_gates = 1;
+}
+
+message EpisodeGateProto {
+    int32 episode_id = 1;
+    repeated string item = 2;
+    string chest = 3;
+}

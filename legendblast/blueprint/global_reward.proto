@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message GlobalRewardCollection {
+    repeated GlobalRewardProto global_reward_proto = 1;
+}
+
+message GlobalRewardProto {
+    int32 level = 1;
+    repeated GlobalRewardLevel global_reward_level = 2;
+}
+
+message GlobalRewardLevel {
+    string rewardId = 1;
+    int32 quantity = 2;
+    string category = 3;
+}

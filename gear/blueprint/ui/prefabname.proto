@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message PrefabNameBlueprint {
+    map<string, PrefabConfig> prefab_names = 1;
+}
+message PrefabConfig {
+    string clzz = 1;
+    string prefab = 2;
+    string bundle = 3;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.gacha;
+
+option java_package = "com.alleylabs.legendblast.app.gacha.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Gacha.Proto";
+
+message GachaAchievementResponseProto {
+    int32 completed = 1;
+    int32 received = 2;
+    map<string, int32> reward = 3;
+}

@@ -1,0 +1,68 @@
+#!/bin/bash
+root_path="$(dirname "$0")"
+in_path="./legendblast"
+out_path="../Assets/AlleyLabs.Data.Proto/"
+out_path_csharp="../Assets/AlleyLabs.Data.Proto/legendblast"
+#out_path_cpp="./gen/gen_cpp"
+#out_path_java="./gen/gen_java"
+
+make_dirs(){
+    make_dir=$1
+    mkdir -p $make_dir
+}
+
+remove_dirs(){
+    rm_dir=$1
+
+    if [ -d "$root_dir" ]; then
+        printf '%s\n' "Removing Lock ($rm_dir)"
+        rm -rf "$root_dir"
+    fi
+}
+
+gen_protos(){
+    root_dir=$1
+    echo "root $root_dir"
+
+    find "$in_path" -type d | while read d; do
+
+        in_sub=$d
+        trim_sub=${in_sub#"$in_path"}
+        out_sub=$root_dir$trim_sub
+
+        echo "Processing folder $in_sub..."
+
+        #echo "root_dir $root_dir..."
+        #echo "trim_sub $trim_sub..."
+        #echo "out_sub $out_sub..."
+
+        if [ ! -d "$out_sub" ]; then
+            make_dirs "$out_sub"
+        fi
+        for file in $in_sub/*.proto
+            do
+                if [ -f "$file" ]; then
+                    echo "Processing \"$file\"..."
+                    #echo "Put \"$file\" to folder \"$out_sub\"..."
+                    protoc --proto_path=./ --csharp_out=$out_sub "$file"
+                fi
+            done
+
+    done
+}
+
+cd $root_path
+
+remove_dirs "$out_path_csharp"
+#remove_dirs "$out_path_cpp"
+#remove_dirs "$out_path_java"
+remove_dirs "$out_path"
+
+make_dirs "$out_path"
+make_dirs "$out_path_csharp"
+#make_dirs "$out_path_cpp"
+#make_dirs "$out_path_java"
+
+gen_protos "$out_path_csharp"
+#gen_protos "$out_path_cpp"
+#gen_protos "$out_path_java"

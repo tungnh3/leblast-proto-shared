@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.battle;
+
+option java_package     = "com.alleylabs.legendblast.app.battle.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+import "legendblast/model/player.proto";
+import "legendblast/model/pb_luckywheel.proto";
+
+message EndBattleRequestProto {
+    bool   win_status     = 1;
+    int32  pass_objective = 2;
+    string level          = 3;
+
+    EventCollectorProto event_collector = 4;
+
+    int32 remain_moving = 5;
+
+    message EventCollectorProto {
+        map<string, int32> items      = 1;
+        map<string, string> variables = 2;
+    }
+}
+
+message EndBattleResponseProto {
+    string                                 next_map_level          = 1;
+    com.alleylabs.legendblast.model.Status chest_status            = 2;
+    int32                                  chest_star_total        = 3;
+    repeated                               Reward reward           = 4;
+    string                                 completed_mission       = 5;
+    int32                                  energy                  = 6;
+    int64                                  chest_star_timer        = 7;
+    int64                                  last_time_update_energy = 8;
+    com.alleylabs.legendblast.model.PBWheelModelProto pb_wheel_model = 9;
+    int32 ticket_wheel_current = 10;
+    int64 first_time_been_stolen = 11;
+}
+
+message Reward {
+    string rewardData  = 1;
+    int32  rewardValue = 2;
+    string category    = 3;
+}
+
+
+

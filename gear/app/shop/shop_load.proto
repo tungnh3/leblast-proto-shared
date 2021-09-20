@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+message ShopLoadResponseProto {
+
+    repeated ShopPackageProto packages = 1;
+    ShopDailyProto daily = 2;
+    int64 daily_restock= 3;
+
+    message ShopPackageProto {
+        string id = 1;
+        int32 purchased = 2;
+        int64 last_restock = 3;
+    }
+
+    message ShopDailyProto {
+        repeated string daily_offer = 1;
+        repeated string daily_restock = 2;
+    }
+}

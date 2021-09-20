@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+import "legendblast/common/wheel_type.proto";
+
+message LuckyWheelBlueprint {
+    map<int32,LuckyWheelProto> luckywheels = 1;
+    string md5 = 2;
+}
+
+message LuckyWheelProto {
+    com.alleylabs.legendblast.common.LuckyWheelType id = 1;
+    string name = 2;
+    string desc = 3;
+    string spin_currency = 4;
+    int32 spin_cost = 5;
+    repeated string wedge_list = 6;
+    repeated int32 wedge_weight = 7;
+    repeated int32 wedge_modifier = 8;
+    int32 reward_bar_count = 9;
+    string reward_content = 10;
+    int32 reward_amount = 11;
+    int32 free_ads = 12;
+    int32 free_spin = 13;
+    repeated string display_weekday = 14;
+    int32 expire_timer = 15;
+    com.alleylabs.legendblast.common.LuckyWheelType sequel_wheel = 16;
+    int32 required_spin_till_sequel = 17;
+    int32 appearance_per_day = 18;
+    int32 display_priority = 19;
+    int64 refresh_time = 20;
+    int64 start_time = 21;
+    int64 end_time = 22;
+    int32 reset_threshold = 23;
+    int32 gemToTicket = 24;
+}
+
+message LuckyWheelPoolBlueprint {
+    map<string, LuckyWheelPoolProto> pools = 1;
+    string md5 = 2;
+}
+
+message LuckyWheelPoolProto {
+    string id = 1;
+    string desc = 2;
+    repeated RewardItemProto items = 3;
+    int32 reset_threshold = 4;
+}
+
+message RewardItemProto {
+    int32 id = 1;
+    string reward_data = 2;
+    int32 reward_value = 3;
+    int32 weight = 4;
+    int32 weight_modifier = 5;
+    string icon = 6;
+}

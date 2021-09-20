@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message TutorialDataProto {
+    repeated TutorialProto tutorials = 1;
+}
+
+message TutorialProto {
+    string   tutorial_id                             = 1;
+    string   name                                    = 2;
+    string   depends_ids                             = 3;
+    string   group_ids                               = 5;
+    repeated TutorialTriggerProto triggers           = 4;
+    repeated DataReturn data_return                  = 6;
+    repeated TutorialTriggersProto tutorial_triggers = 7;
+    bool     enable                                  = 8;
+}
+message TutorialTriggerProto {
+    string context       = 1;
+    string trigger_type  = 2;
+    string trigger_value = 3;
+}
+
+message TutorialTriggersProto {
+    string     trigger_context      = 1;
+    map<string, string> trigger_map = 2;
+}
+
+message DataReturn {
+    string return_data_type  = 1;
+    int32  return_data_value = 2;
+}
+
+message CinematicDataBlueprint {
+    repeated CinematicDataProto cinematics = 1;
+}
+
+message CinematicDataProto {
+    string   level                = 1;
+    string   mission              = 2;
+    string   cinematic_id         = 3;
+    string   pending_ftue         = 4;
+    bool     enable               = 7;
+}

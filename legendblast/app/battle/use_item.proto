@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.battle;
+
+option java_package = "com.alleylabs.legendblast.app.battle.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+message UseItemRequestProto {
+    string item_name = 1;
+}

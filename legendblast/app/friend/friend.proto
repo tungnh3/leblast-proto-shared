@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.friend;
+
+option java_package = "com.alleylabs.legendblast.app.friend.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Friend.Proto";
+
+import "legendblast/model/friend.proto";
+
+message FriendUpdateRequest{
+    string access_token = 1;
+}
+
+message FriendUpdateResponse{
+    repeated com.alleylabs.legendblast.model.Friend friends = 1;
+}

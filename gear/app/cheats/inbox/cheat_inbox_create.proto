@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+message CheatInboxCreateRequestProto {
+    string title = 1;
+    string content = 2;
+    string deep_link = 3;
+    int64 expiry = 4;
+    map<string, int32> rewards = 5;
+}

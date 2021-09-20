@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+
+message Friend{
+    string user_id = 1;
+    string user_name = 2;
+    string fb_id = 3;
+    int32 level = 4;
+    int32 avatar_id = 5;
+}

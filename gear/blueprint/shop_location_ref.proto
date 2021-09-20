@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message ShopLocationRefBlueprint {
+    repeated ShopLocationRef shopLocation = 1;
+}
+
+message ShopLocationRef {
+    string shop_location = 1;
+    string section_title = 2;
+    int32 priority = 3;
+    bool show_info = 4;
+    string info_des = 5;
+    int32 display   = 6;
+}

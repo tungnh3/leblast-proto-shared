@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.model;
+
+option java_package = "com.alleylabs.gear.model.proto";
+option csharp_namespace = "AlleyLabs.Platform.Model.Proto";
+
+import "google/protobuf/any.proto";
+
+message RbeEventProto {
+    string id = 1;
+    repeated RbeTaskProto tasks = 2;
+    RbeCompetitiveProto competitive = 3;
+    int64 completed = 4;
+}
+
+message RbeTaskProto {
+    string id = 1;
+    int32 progress = 2;
+    int64 reward = 3;
+}
+
+message RbeCompetitiveProto {
+    int32 score = 1;
+    int32 rank = 2;
+    int64 reward = 3;
+}

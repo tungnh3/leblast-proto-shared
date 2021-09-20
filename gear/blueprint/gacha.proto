@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message GachaBlueprint {
+    repeated GachaPackage packages = 1;
+}
+
+message GachaPackage {
+    string id = 1;
+    repeated GachaPrice prices = 2;
+    repeated GachaPool pools = 3;
+    int32 reset_threshold = 4;
+    int64 start_time = 5;
+    int64 end_time = 6;
+    string code_name = 7;
+    string banner = 8;
+    string display_title = 9;
+    string episode_id = 10;
+}
+
+message GachaPrice {
+    int32 id = 1;
+    map<string, int32> price = 2;
+    int32 pull = 3;
+    int32 pull_bonus = 4;
+}
+
+message GachaPool {
+    int32 id = 1;
+    repeated GachaPoolItem items = 2;
+    string pool_type = 3;
+}
+
+message GachaPoolItem {
+    int32 id = 1;
+    map<string, int32> rewards = 2;
+    int32 weight = 3;
+    int32 modifier = 4;
+}

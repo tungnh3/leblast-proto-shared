@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message HeroSuggestBlueprint {
+    repeated HeroSuggestProto suggests = 1;
+}
+
+message HeroSuggestProto {
+    string hero_id = 1;
+
+    map<string, int32> target_sellect_score = 2;
+    map<string, int32> target_upgrade_score = 3;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.user;
+
+option java_package = "com.alleylabs.legendblast.app.user.proto";
+option csharp_namespace = "AlleyLabs.LB.App.User.Proto";
+
+message TopPlayerList {
+    repeated TopPlayerProto top_player_list = 1;
+}
+
+message TopPlayerProto {
+    string player_name = 1;
+    string map_level = 2;
+    int32 tournament_cup_number = 3;
+}

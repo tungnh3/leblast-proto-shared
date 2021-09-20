@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message MiscParamBlueprint {
+    int64 day_start = 1;
+    repeated string shop_daily_items = 2;
+    int32 shop_daily_duration = 3;
+    map<string, int32> shop_daily_refresh_cost = 4;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message GachaAchievementBlueprint {
+    repeated GachaAchievementProto gacha_achievements = 1;
+}
+
+message GachaAchievementProto {
+    int32 milestone_of_pull = 1;
+    string reward_item_type = 2;
+    string reward_item_id = 3;
+    int32 quantity = 9;
+}

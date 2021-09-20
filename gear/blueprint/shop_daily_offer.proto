@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message ShopDailyOfferBlueprint {
+    repeated ShopDailyOfferItem offers = 1;
+}
+
+message ShopDailyOfferItem {
+    repeated string items = 1;
+    int64 start = 2;
+}

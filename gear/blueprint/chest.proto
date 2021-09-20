@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message ChestBlueprint {
+    repeated ChestPackage packages = 1;
+}
+
+message ChestPackage {
+    string id = 1;
+    repeated ChestPool pools = 2;
+}
+
+message ChestPool {
+    int32 id = 1;
+    string code_name = 2;
+    repeated ChestPoolItem items = 3;
+}
+
+message ChestPoolItem {
+    map<string, int32> rewards = 1;
+    int32 weight = 2;
+}

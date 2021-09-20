@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.tutorial;
+
+option java_package = "com.alleylabs.legendblast.app.tutorial.proto";
+option csharp_namespace = "AlleyLabs.LB.App.tutorial.Proto";
+
+message TutorialRequestProto {
+    string tutorialId = 1;
+}
+
+
+message TutorialResponseProto {
+    repeated string user_tutorial_data = 1;
+}

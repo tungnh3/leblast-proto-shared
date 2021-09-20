@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.cheat.user;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.user.proto";
+option csharp_namespace = "AlleyLabs.LegendBlast.App.Cheat.User.Proto";
+
+message CheatCurrencyRequestProto {
+    string currency_name = 1;
+    int32 currency_no = 2;
+}

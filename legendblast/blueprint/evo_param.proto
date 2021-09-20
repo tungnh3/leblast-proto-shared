@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message EvoParamCollection {
+    repeated EvoParamProto evo_param_lst = 1;
+}
+
+message EvoParamProto {
+    int32 id = 1;
+    int32 evoType = 2;
+    int32 level = 3;
+    int32 shard = 4;
+    int32 i_soft_currency = 5;
+    string rarity = 6;
+}

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package     = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+
+message PlayerProto {
+    string name                    = 1;
+    int32  player_level            = 2;
+    int32  exp                     = 3;
+    int32  avata_id                = 4;
+    string map_level               = 5;
+    int64  receive_chest_time      = 6;
+    int32  chest_star_num          = 7;
+    int32  cur_team_id             = 8;
+    int32  winstreak_num           = 9;
+    int32  energy                  = 10;
+    int64  last_time_update_energy = 11;
+    Status chest_status            = 12;
+    int64  chest_start_timer       = 13;
+    int64  chest_displayed_timer   = 14;
+    int32  continue_count          = 15;
+    //1: start battle
+    //0: end battle
+    int32  start                   = 16;
+    string completed_mission       = 17;
+
+    repeated string user_tutorial_data = 18;
+    int32 open_gacha_total_number      = 19;
+    int32 gacha_achievement_received   = 20;
+
+    bool start_battle_without_energy = 21;
+    map<string,int64> unlimited_currency = 22;
+    int64 first_time_has_been_stolen = 23;
+}
+
+enum Status {
+    INACTIVE = 0;
+    ACTIVE   = 1;
+    FINISH   = 2;
+}

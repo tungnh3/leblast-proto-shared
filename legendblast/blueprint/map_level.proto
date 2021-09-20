@@ -1,0 +1,54 @@
+syntax = "proto3";
+import "legendblast/blueprint/global_reward.proto";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message MapLevelProto {
+    string                          id                             = 1;
+    repeated                        LevelObjective level_objective = 2;
+    repeated                        Enemy enemies                  = 3;
+    string                          board_matrix                   = 4;
+    int32                           moves                          = 6;
+    string                          first_drop_board_matrix        = 7;
+    repeated                        GlobalRewardLevel level_reward = 10;
+    string                          background                     = 11;
+    ArrayDropRule                   global_drop_rule = 8;
+    map<int32 , ArrayDropRule>      column_drop_rule = 9;
+}
+
+message MapLevelCollection {
+    map<string, MapLevelProto> map_level_collection = 1;
+}
+
+message LevelObjective {
+    string objective_type  = 1;
+    int32  objective_param = 2;
+}
+
+message ArrayDropRule {
+    repeated DropRule drop_rule = 1;
+}
+
+message DropRule {
+    string object_id = 1;
+    int32  weight    = 2;
+    int32  drop_rate = 3;
+    int32  min       = 4;
+    int32  max       = 5;
+}
+message Enemy {
+    int32  index                   = 1;
+    string global_id_use           = 2;
+    string type                    = 3;
+    string hg                      = 4;
+    int32  last_skill_inherit      = 5;
+    string skill_ids               = 6;
+    string weight_list             = 7;
+    int32  decrement               = 8;
+    string reset_all_when_wt_below = 9;
+    string matrix_affect           = 10;
+    int32 boss_boolean             = 11;
+}

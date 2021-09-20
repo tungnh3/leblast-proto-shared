@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+
+message MailTemplateBlueprint{
+    repeated MailTemplate mail_template_item = 1;
+}
+
+message MailTemplate {
+    string mail_template_id = 1;
+    int32 level = 2;
+}
+

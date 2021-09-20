@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.luckywheel;
+
+option java_package = "com.alleylabs.legendblast.app.luckywheel.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Luckywheel.Proto";
+
+import "google/protobuf/any.proto";
+import "legendblast/model/luckywheel.proto";
+
+message LuckyWheelSpinResponse {
+    map<string, int32> rewards = 1;
+    int64 next_time_show_ads = 3;
+}
+
+message LuckyWheelGetModelResponse{
+    repeated com.alleylabs.legendblast.model.LuckyWheelProto available_model = 1;
+}
+
+message LuckyWheelSpinRequest {
+    int32 wheel_type = 1;
+}
+
+message LuckyWheelClaimMileageResponse {
+    map<string, int32> rewards = 1;
+    int32 remain_number = 2;
+}

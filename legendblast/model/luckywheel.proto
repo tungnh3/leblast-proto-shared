@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+import "legendblast/common/wheel_type.proto";
+
+message LuckyWheelProto {
+    int32 number_spin_cur_wheel = 1;
+    com.alleylabs.legendblast.common.LuckyWheelType wheel_type = 2;
+    int32 ticket_free = 3;
+    int32 number_ads = 4;
+    repeated WedgeProto wedge_list = 5;
+    int64 time_refresh = 6;
+    int32 number_appear_sequel = 7;
+    int64 next_time_show_ads = 8;
+}
+
+message WedgeProto {
+    string reward = 1;
+    int32 reward_value = 2;
+    string icon = 3;
+}
+
+

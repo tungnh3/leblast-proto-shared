@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message EnemyCollection {
+    repeated EnemyProto enemies = 1;
+}
+
+message EnemyProto {
+    string id = 1;
+    string name = 2;
+    string modelId = 3;
+    string color_weakness = 4;
+    string description = 5;
+    string color_effective = 6;
+}

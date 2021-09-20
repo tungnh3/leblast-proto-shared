@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.building;
+
+option java_package = "com.alleylabs.legendblast.app.cheat.building.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Cheat.Building.Proto";
+
+message BuildingCheatRequestProto {
+    int32 level = 1;
+}

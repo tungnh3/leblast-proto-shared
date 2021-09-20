@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "google/protobuf/any.proto";
+
+message ShopIapRequestProto {
+    string iap_package = 1;
+    string shop_package = 2;
+    string receipt = 3;
+    string signature = 4;
+
+    IapStore store = 5;
+    enum IapStore {
+        TEST = 0;
+        GOOGLE = 1;
+        APPLE = 2;
+    }
+}
+
+message ShopIapResponseProto {
+    repeated google.protobuf.Any items = 1;
+}

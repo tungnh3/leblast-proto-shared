@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message PostBattleCollection {
+    repeated PostBattleProto post_battle = 1;
+}
+message PostBattleProto {
+    int32 retry_time = 1;
+    int32 add_moves = 2;
+    int32 cost = 3;
+    string currency = 4;
+    int32 rocket = 5;
+    int32 bomb = 6;
+}
+

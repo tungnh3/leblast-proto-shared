@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message RbeRewardBlueprint {
+    repeated RbeRewardRecord reward = 1;
+}
+
+message RbeRewardRecord {
+    string id = 1;
+    repeated RbeRewardRank rank = 2;
+}
+
+message RbeRewardRank {
+    int32 index = 1;
+    int32 position = 2;
+    int32 percent = 3;
+    map<string, int32> reward = 4;
+    map<string, string> icon = 5;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.battle;
+
+option java_package = "com.alleylabs.legendblast.app.battle.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+message UseBoosterRequestProto {
+    map<string, int32> boosters = 1;
+}
+
+message UseBoosterResponseProto {
+    map<string, int32> boosters = 1;
+}

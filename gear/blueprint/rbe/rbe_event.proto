@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package     = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message RbeEventBlueprint {
+    repeated RbeEventRecord event = 1;
+}
+
+message RbeEventRecord {
+    string     id                  = 1;
+    repeated   string task         = 2;
+    map<string, string> entry_rule = 3;
+    int64      start               = 4;
+    int64      end                 = 5;
+    int32      duration            = 6;
+    int32      recurring           = 7;
+    int32      pre_duration        = 8;
+    int32      post_duration       = 9;
+
+    RbeCompetitiveRecord competitive = 10;
+    RbeChallengeRecord   challenge   = 11;
+    RbeQuestRecord       quest       = 12;
+    RbeAchievementRecord achievement = 13;
+
+    string event_name     = 14;
+    string event_desc     = 15;
+    string event_mode     = 16;
+    string banner_url     = 17;
+    int32  weight         = 18;
+    bool   featured       = 19;
+    string featuredReward = 20;
+    string event_icon     = 21;
+    string layer_icon = 22;
+    string open_desc = 23;
+    string end_desc = 24;
+    string notifi_desc = 25;
+}
+
+message RbeAchievementRecord {
+}
+
+message RbeCompetitiveRecord {
+    string reward       = 1;
+    int32  segment_size = 2;
+    string segment_rule = 3;
+}
+
+message RbeChallengeRecord {
+    string challengeType = 1;
+}
+
+message RbeQuestRecord {
+    string questType = 1;
+}

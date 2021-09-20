@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message ObjectCollection {
+    repeated ObjectProto objects = 1;
+}
+
+message ObjectProto {
+    string id = 1;
+    string name = 2;
+    string label = 3;
+    string skill = 4;
+    string color = 5;
+    string size = 6;
+    int32 overlay = 7;
+    int32 override = 8;
+    int32 gravity = 9;
+    string clearable = 10;
+    string duralbility = 11;
+    string by_booster = 12;
+    string by_ability = 13;
+    int32 priority = 14;
+    string combo_req = 15;
+    string random_from = 16;
+    int32 tappable = 17;
+    string by_color = 18;
+    int32 multi_state = 19;
+    int32 override_gravity = 20;
+
+
+}

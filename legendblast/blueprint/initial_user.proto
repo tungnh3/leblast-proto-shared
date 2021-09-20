@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message InitialUserBlueprint {
+    InitialUserProto initial_user = 1;
+}
+
+message InitialUserProto {
+    map<string, int32> heros = 1;
+    repeated Team teams = 2;
+    map<string, int32> currencies = 3;
+}
+
+message Team {
+    int32 id = 1;
+    repeated string heros = 2;
+}
+

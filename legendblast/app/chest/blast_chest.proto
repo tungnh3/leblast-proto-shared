@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.chest;
+
+option java_package = "com.alleylabs.legendblast.app.chest.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Chest.Proto";
+
+import "legendblast/model/player.proto";
+
+message BlastChestResponseProto {
+    repeated Reward reward = 1;
+    com.alleylabs.legendblast.model.Status chest_status = 2;
+}
+
+message Reward {
+    string name = 1;
+    int32 value = 2;
+}
+
+message BlastChestRequestProto {
+    string id = 1;
+}
+
+message ReClaimBlastChestResponse{
+    repeated Reward items = 1;
+}
+

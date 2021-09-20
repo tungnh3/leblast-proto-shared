@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+import "google/protobuf/any.proto";
+
+message RbeClaimTaskRequestProto {
+    string id = 1;
+    string task = 2;
+}
+
+message RbeClaimTaskResponseProto {
+    repeated google.protobuf.Any rewards = 1;
+}

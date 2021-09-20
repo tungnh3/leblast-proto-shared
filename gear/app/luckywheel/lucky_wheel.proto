@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.luckywheel.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+message LuckyWheelRequestProto {
+    string level = 1;
+    bool isMultiSpin = 2;
+}
+
+message LuckyWheelSpinResponse {
+    repeated LuckyWheelItemResponse results = 1;
+}
+
+message LuckyWheelRefreshResponse {
+    repeated LuckyWheelItemResponse items = 1;
+    int64 timeNextRefresh = 2;
+}
+
+message LuckyWheelItemResponse{
+    string id = 1;
+    string type = 2;
+    int32 value = 3;
+}
+
+message LuckyWheelGiftClaimResponse {
+    LuckyWheelItemResponse itemsBonus = 1;
+}
+

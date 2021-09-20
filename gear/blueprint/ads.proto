@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package     = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message AdsBlueprint {
+    repeated AdsProto ads       = 1;
+}
+
+message AdsUnitBlueprint{
+    repeated AdsUnitProto units = 1;
+}
+
+message AdsProto {
+    string id          = 1;
+    int32  limit       = 2;
+    int64  start_time  = 3;
+    int32  duration    = 4;
+    int32  cycle       = 5;
+    string misc_params = 6;
+}
+
+message AdsUnitProto {
+    string id                 = 1;
+    string provider           = 2;
+    string android_ads_appid  = 3;
+    string android_ads_unitid = 4;
+    string ios_ads_appid      = 5;
+    string ios_ads_unitid     = 6;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.user;
+
+option java_package = "com.alleylabs.legendblast.app.user.proto";
+option csharp_namespace = "AlleyLabs.LB.App.User.Proto";
+
+message MissionRewardResponseProto {
+    string completedMission = 1;
+    map<string, int32> reward = 2;
+}

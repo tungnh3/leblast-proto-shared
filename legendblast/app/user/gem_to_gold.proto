@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.user;
+
+option java_package = "com.alleylabs.legendblast.app.user.proto";
+option csharp_namespace = "AlleyLabs.LB.App.User.Proto";
+
+message GemToGoldRequestProto {
+    int32 gem_number = 1;
+}

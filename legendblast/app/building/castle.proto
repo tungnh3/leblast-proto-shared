@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.building;
+
+option java_package = "com.alleylabs.legendblast.app.building.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+import "legendblast/model/player.proto";
+
+message CastleUpgradeResponseProto {
+    int64 time_finish = 1;
+}

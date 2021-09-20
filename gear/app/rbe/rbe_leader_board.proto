@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.app;
+
+option java_package = "com.alleylabs.gear.app.proto";
+option csharp_namespace = "AlleyLabs.Platform.Network.Proto";
+
+message RbeLeaderBoardRequestProto {
+    string id = 1;
+    int32 top = 2;
+    int32 above = 3;
+    int32 below = 4;
+}
+
+message RbeLeaderBoardResponseProto {
+    RankInfo rank_info = 1;
+    repeated BoardRecord leaderboard = 2;
+
+    message BoardRecord {
+        string id = 1;
+        string name = 2;
+        int32 score = 3;
+        int32 rank = 4;
+        int32 avatar_id = 5;
+        string fb_id = 6;
+    }
+
+    message RankInfo {
+        int32 score = 1;
+        int32 rank = 2;
+        int32 reward = 3;
+        int32 previous_score = 4;
+        int32 next_score = 5;
+    }
+}

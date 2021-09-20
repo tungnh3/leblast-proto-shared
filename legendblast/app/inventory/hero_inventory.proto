@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.inventory;
+
+option java_package = "com.alleylabs.legendblast.app.inventory.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Inventory.Proto";
+
+import "legendblast/model/team.proto";
+
+message HeroInventoryUpdateRequestProto {
+    repeated com.alleylabs.legendblast.model.TeamProto team_lst = 1;
+}

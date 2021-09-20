@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message GenericDialogsBlueprint {
+    map<string, GenericDialog> dialogs = 1;
+}
+message GenericDialog {
+    string dialog_id = 1;
+    string dialog_prefab_template = 2;
+    string title = 3;
+    string body = 4;
+    string background_image = 5;
+    map<string,ButtonConfig> buttons = 6;
+    
+}
+message ButtonConfig {
+    string button_id = 1;
+    string button_text = 2;
+    string button_image = 3;
+    string button_action = 4;
+}

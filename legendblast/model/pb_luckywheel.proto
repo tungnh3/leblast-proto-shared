@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.model;
+
+option java_package = "com.alleylabs.legendblast.model.proto";
+option csharp_namespace = "AlleyLabs.LB.Model.Proto";
+
+import "legendblast/common/pb_wedge_type.proto";
+import "legendblast/model/friend.proto";
+
+message PBWheelModelProto {
+    repeated WedgePbWheelProto wheel_wedges = 1;
+    int32 ads_spin_times = 2;
+    repeated com.alleylabs.legendblast.model.Friend friend = 3;
+    bool is_reset_in_rare = 4;
+    string wheel_id = 5;
+}
+
+message WedgePbWheelProto {
+    int32 wedge_id = 1;
+    string item_id = 2;
+    int32 amount = 3;
+    com.alleylabs.legendblast.common.PbWedgeWheelType wedgeType = 4;
+    bool claimed = 5;
+}
+

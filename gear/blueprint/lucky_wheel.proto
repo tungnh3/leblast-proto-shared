@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.blueprint;
+
+option java_package = "com.alleylabs.gear.blueprint.proto";
+option csharp_namespace = "AlleyLabs.Platform.Blueprint.Proto";
+
+message LuckyWheelBlueprint {
+    repeated LuckyWheelPackage packages = 2;
+}
+
+message LuckyWheelPackage {
+    string name = 1;
+    string type = 2;
+    string level = 3;
+    string description = 4;
+    int64 refresh_time = 5;
+    string refresh_currency = 6;
+    int32 refresh_cost = 7;
+    string spin_currency = 8;
+    int32 spin_cost = 9;
+    int32 multiple_spin = 10;
+    string multiple_spin_currency = 11;
+    int32 multiple_spin_cost = 12;
+    int64 ad_promotion_appear_duration = 13;
+    int64 ad_promotion_interval = 14;
+    string section_list = 15;
+    int32 reward_bar_max_value = 16;
+    string reward_content = 17;
+    int32 reward_amount = 18;
+    int32 display_priority = 19;
+    int64 build_time = 20;
+    string build_cost_currency = 21;
+    int32 build_cost = 22;
+    int64 start_time = 23;
+    int64 end_time = 24;
+    string episode = 25;
+}

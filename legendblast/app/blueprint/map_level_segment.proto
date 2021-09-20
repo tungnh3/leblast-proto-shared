@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.app.blueprint;
+
+option java_package = "com.alleylabs.legendblast.app.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.App.Proto";
+
+message MapLevelSegmentRequestProto {
+    string start_level = 1;
+    string end_level = 2;
+}

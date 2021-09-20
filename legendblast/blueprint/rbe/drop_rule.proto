@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint.rbe;
+
+option java_package = "com.alleylabs.legendblast.blueprint.rbe.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message DropRuleBlueprint {
+    repeated DropRuleProto items = 1;
+}
+
+message DropRuleProto {
+    string object_id = 1;
+    string name = 2;
+    string label = 3;
+    repeated string item_drop = 4;
+    string required_hero = 5;
+    float drop_rate = 6;
+    int32 max_count = 7;
+    float max_obtain_scale_by_move = 8;
+}

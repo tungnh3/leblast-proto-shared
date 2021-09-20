@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package     = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message AiScoreConfigBlueprint {
+    repeated AiScoreProto configs = 1;
+}
+
+message AiScoreProto {
+    string     level              = 1;
+    int32      blast_tile         = 2;
+    map<string, int32> objectives = 3;
+    int32      create_rocket      = 4;
+    int32      create_boom        = 5;
+    int32      create_disco       = 6;
+    int32      hero_ability       = 7;
+    int32      temp_buff          = 8;
+}

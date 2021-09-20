@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.common;
+
+option java_package = "com.alleylabs.legendblast.common.proto";
+option csharp_namespace = "AlleyLabs.LB.Common.Proto";
+
+
+enum PbWedgeWheelType {
+    Normal_Wedge = 0;
+    Rare_Wedge = 1;
+    Social_Wedge = 2;
+}

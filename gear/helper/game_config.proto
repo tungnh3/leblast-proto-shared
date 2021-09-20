@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package com.alleylabs.gear.redis;
+
+option java_package = "com.alleylabs.gear.helper.proto";
+
+
+message BlueprintConfig {
+    string version = 1;
+    map<string, string> on_demand = 2;
+}
+
+message BundleConfig {
+    string asset = 1;
+    string odl = 2;
+    string odb = 3;
+}
+
+message MaintainConfig {
+    MaintainTimeConfig global = 1;
+    map<string, MaintainTimeConfig> features = 2;
+}
+
+message MaintainTimeConfig {
+    int64 start = 1;
+    int64 end = 2;
+}

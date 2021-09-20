@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package com.alleylabs.legendblast.blueprint;
+
+option java_package = "com.alleylabs.legendblast.blueprint.proto";
+option csharp_namespace = "AlleyLabs.LB.Blueprint.Proto";
+
+message HeroCollection {
+    repeated HeroProto heroes = 1;
+}
+
+message HeroProto {
+    string id = 1;
+    string name = 2;
+    string rarity = 3;
+    string race = 4;
+    string color = 5;
+    repeated HeroLevelProto level = 6;
+    string description = 7;
+    int32 isVisible = 8;
+    string modelID = 9;
+    string longName = 10;
+}
+
+message HeroLevelProto {
+    int32 level = 1;
+    int32 blastPower = 2;
+    string skill = 3;
+    string model = 4;
+}
